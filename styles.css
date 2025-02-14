@@ -1,6 +1,8 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2a2a2a;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,95 +11,114 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
     text-align: center;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
+/* Form */
 form {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    margin-right: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     background-color: #5cb85c;
     color: white;
-    border-radius: 3px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #4cae4c;
 }
 
+/* Filters */
 .filters {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
 .filters button {
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
-    background-color: #ddd;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.filters button.active {
+    background-color: #5cb85c;
 }
 
 .filters button:hover {
-    background-color: #ccc;
+    background-color: #6fbf6f;
 }
 
+/* To-Do List */
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    background-color: #eee;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: #444;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
 }
 
-li.completed {
+li.completed span {
     text-decoration: line-through;
     color: #888;
 }
 
-li:last-child {
-    border-bottom: none;
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
 }
 
+/* Delete Button */
 .delete-btn {
-    background-color: #d9534f;
-    color: white;
+    background-color: transparent;
     border: none;
-    padding: 5px 10px;
+    color: #d9534f;
     cursor: pointer;
-    border-radius: 3px;
+    font-size: 18px;
 }
 
 .delete-btn:hover {
-    background-color: #c9302c;
+    color: #c9302c;
 }
